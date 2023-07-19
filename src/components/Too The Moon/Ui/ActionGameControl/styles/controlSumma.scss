@@ -1,0 +1,229 @@
+.game-control-summa {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  background: #281C33;
+  padding: 9px;
+
+  &__action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #442C5B;
+    border: 1.4px solid #7C469F;
+    border-radius: 14px;
+    min-height: 44px;
+    max-height: 44px;
+    min-width: 44px;
+    max-width: 44px;
+    color: #B575CB;
+    font-size: 30px;
+    cursor: pointer;
+    transition: 0.25s;
+    font-family: $font-family-Poppins;
+    font-style: normal;
+    font-weight: 600;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+
+    &:hover {
+      border: 1.4px solid #BC5ECB;
+      color: #BC5ECB;
+    }
+  }
+
+  &__summa {
+    $fz: 36;
+    font-family: $font-family-Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: em($fz, $fz_base);
+    line-height: em(55, $fz);
+    color: #E89252;
+  }
+
+  &__width {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 100%;
+  }
+}
+
+.game-control-fast-action {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  margin: 8px 14px 8px 14px;
+
+  &__trash {
+    cursor: pointer;
+    background: #1B1223;
+    border-radius: 4px;
+    padding: 8px;
+    border: 1px solid #1B1223;
+    margin: 0 1px 0 0px;
+
+    &:hover {
+      border: 1px solid #E89252;
+      color: #E89252;
+    }
+  }
+
+  &__summa {
+    margin: 0 1px 0 1px;
+    background: #1B1223;
+    border-radius: 4px;
+    border: 1px solid #1B1223;
+    padding: 6px 10px 6px 10px;
+    $fz: 18;
+    font-family: $font-family-Poppins;
+    font-style: normal;
+    font-weight: 700;
+    font-size: em($fz, $fz_base);
+    line-height: em(28, $fz);
+    color: #6C4479;
+    cursor: pointer;
+    transition: 0.25s;
+
+    &:hover {
+      border: 1px solid #E89252;
+      color: #E89252;
+    }
+  }
+
+  &__width {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 100%;
+  }
+}
+
+
+/*
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .game-control-summa {
+    padding: 8px 8px 8px 6px;
+    border-top: 1px solid #965ECB;
+    border-bottom: 1px solid #965ECB;
+
+    &__width {
+      min-width: 220px;
+      max-width: 220px;
+    }
+
+    &__action {
+      $size: 30px;
+      min-height: $size;
+      max-height: $size;
+      min-width: $size;
+      max-width: $size;
+      border-radius: 8px;
+      font-size: 20px;
+    }
+
+    &__summa {
+      $fz: 21;
+      font-size: em($fz, $fz_base);
+      line-height: em(32, $fz);
+    }
+  }
+  .game-control-fast-action {
+    margin: 8px 0px 8px 6px;
+
+    &__summa {
+      $fz: 12.5;
+      font-size: em($fz, $fz_base);
+      line-height: em(16, $fz);
+      padding: 7px 6px 7px 6px;
+    }
+
+    &__trash {
+      padding: 6px;
+
+      img {
+        width: 15px;
+        height: 15px;
+      }
+    }
+
+    &__width {
+      min-width: 220px;
+      max-width: 220px;
+    }
+  }
+}
+
+/*
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 1024px) and (orientation: landscape) {
+  .game-control-summa {
+    padding: 8px 8px 8px 6px;
+    border-top: 1px solid #965ECB;
+    border-bottom: 1px solid #965ECB;
+
+    &__width {
+      min-width: 220px;
+      max-width: 220px;
+    }
+
+    &__action {
+      $size: 30px;
+      min-height: $size;
+      max-height: $size;
+      min-width: $size;
+      max-width: $size;
+      border-radius: 8px;
+      font-size: 20px;
+    }
+
+    &__summa {
+      $fz: 21;
+      font-size: em($fz, $fz_base);
+      line-height: em(32, $fz);
+    }
+  }
+
+  .content-action-element__left-control .game-control-summa {
+    padding: 8px 6px 8px 6px;
+    justify-content: end;
+  }
+
+  .game-control-fast-action {
+    margin: 8px 0px 8px 6px;
+
+    &__summa {
+      $fz: 12.5;
+      font-size: em($fz, $fz_base);
+      line-height: em(16, $fz);
+      padding: 7px 6px 7px 6px;
+    }
+
+    &__trash {
+      padding: 6px;
+
+      img {
+        width: 15px;
+        height: 15px;
+      }
+    }
+
+    &__width {
+      min-width: 220px;
+      max-width: 220px;
+    }
+  }
+
+
+  .content-action-element__left-control .game-control-fast-action {
+    justify-content: end;
+    margin: 8px 10px 8px 0px;
+  }
+}

@@ -1,0 +1,218 @@
+.user-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: #242941;
+  border-radius: 6px;
+  padding: 3px 0 3px 0;
+  margin: 10px 0 10px 0;
+  width: 352px;
+  overflow: hidden;
+
+  &__abbreviated {
+    $fz: 18;
+    font-family: $font-family-OpenSansCondensed;
+    font-style: normal;
+    font-weight: 700;
+    font-size: em($fz, $fz_base);
+    line-height: em(25, $fz);
+    min-width: 25px;
+    color: #282E45;
+    background: #E9DDB1;
+    border-radius: 4px;
+    text-transform: uppercase;
+    padding: 3px;
+    text-align: center;
+  }
+
+  &__name {
+    $fz: 16;
+    font-family: $font-family-OpenSansCondensed;
+    font-style: normal;
+    font-weight: 700;
+    font-size: em($fz, $fz_base);
+    line-height: em(22, $fz);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #8E9DD6;
+    padding: 6px;
+    width: 44px;
+  }
+
+  &__summa {
+    $fz: 16;
+    font-family: $font-family-OpenSansCondensed;
+    font-style: normal;
+    font-weight: 700;
+    font-size: em($fz, $fz_base);
+    line-height: em(22, $fz);
+    color: #A3B5FA;
+    padding: 6px;
+  }
+
+  &__rate {
+    $fz: 17;
+    font-family: $font-family-Oxanium;
+    font-style: normal;
+    font-weight: 600;
+    font-size: em($fz, $fz_base);
+    line-height: em(21, $fz);
+    background: #1C2030;
+    border: 1px solid #399977;
+    border-radius: 2.5px;
+    padding: 3px 12px 2px 12px;
+    color: #399977;
+  }
+
+  &__summa-win {
+    $fz: 16;
+    font-family: $font-family-OpenSansCondensed;
+    font-style: normal;
+    font-weight: 700;
+    font-size: em($fz, $fz_base);
+    line-height: em(22, $fz);
+    color: #399977;
+    margin: 0px 8px 0px 0px;
+  }
+
+  &__win-cup {
+    display: none;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+
+    &--animated {
+      margin: auto;
+      position: absolute;
+      top: 0;
+      left: -40px;
+      bottom: 0;
+      right: 0;
+      animation: 5s linear 0s normal none infinite running rot;
+    }
+  }
+
+  &--win {
+    min-width: 390px;
+    border: 1px solid rgba(239, 158, 83, 0.4);
+
+    .user-card__win-cup {
+      display: flex;
+    }
+  }
+}
+
+@keyframes rot {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes rot {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .user-card {
+    width: 100%;
+
+    &__abbreviated {
+      $fz: 15;
+      font-size: em($fz, $fz_base);
+      line-height: em(21, $fz);
+    }
+
+    &__name {
+      $fz: 14;
+      font-size: em($fz, $fz_base);
+      line-height: em(19, $fz);
+    }
+
+    &__summa {
+      $fz: 14;
+      font-size: em($fz, $fz_base);
+      line-height: em(19, $fz);
+    }
+
+    &__rate {
+      $fz: 14;
+      font-size: em($fz, $fz_base);
+      line-height: em(19, $fz);
+    }
+
+    &__summa-win {
+      $fz: 14;
+      font-size: em($fz, $fz_base);
+      line-height: em(18, $fz);
+    }
+
+
+    &__win-cup {
+      display: none !important;
+    }
+
+    &--win {
+      min-width: unset;
+    }
+  }
+}
+
+/*
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 1024px) and (orientation: landscape) {
+  .user-card {
+    width: 100%;
+
+    &__abbreviated {
+      $fz: 15;
+      font-size: em($fz, $fz_base);
+      line-height: em(21, $fz);
+    }
+
+    &__name {
+      $fz: 14;
+      font-size: em($fz, $fz_base);
+      line-height: em(19, $fz);
+      text-overflow: unset;
+    }
+
+    &__summa {
+      $fz: 14;
+      font-size: em($fz, $fz_base);
+      line-height: em(19, $fz);
+    }
+
+    &__rate {
+      $fz: 14;
+      font-size: em($fz, $fz_base);
+      line-height: em(19, $fz);
+    }
+
+    &__summa-win {
+      $fz: 14;
+      font-size: em($fz, $fz_base);
+      line-height: em(18, $fz);
+    }
+
+    &__win-cup {
+      display: none !important;
+    }
+
+    &--win {
+      min-width: unset;
+    }
+  }
+}

@@ -1,0 +1,124 @@
+.game-control {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, #5E2F74 0%, #442C5B 100%);
+  border: 1px solid #965ECB;
+  box-shadow: 1px 11px 20px rgba(0, 0, 0, 0.43);
+  border-radius: 14px;
+}
+
+
+.game-control__play-bet {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 92%;
+  background: #EF9E53;
+  border-radius: 16px;
+  border: 1px solid #EF9E53;
+  cursor: pointer;
+
+  $fz: 34;
+  font-family: $font-family-Poppins;
+  font-style: normal;
+  font-weight: 700;
+  font-size: em($fz, $fz_base);
+  line-height: em(42, $fz);
+  color: #632A18;
+  padding: 6px 0 6px 0;
+  transition: 0.25s;
+  margin: 8px 14px 12px 14px;
+  border-bottom: 6px solid #9D533E;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+
+  &:hover {
+    transform: scale(1.02);
+    border: 1px solid #E89252;
+    border-bottom: 6px solid #9D533E;
+    //  color: #E89252;
+  }
+}
+
+/*
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .action-game-control {
+    flex-direction: column;
+    background: linear-gradient(180deg, #5E2F74 0%, #442C5B 100%);
+    border: 1px solid #965ECB;
+    box-shadow: 1px 11px 20px rgba(0, 0, 0, 0.43);
+    border-radius: 8px;
+    margin: 4px;
+  }
+
+  .game-control__play-bet {
+    position: absolute;
+    top: 50%;
+    transform: translate(0%, -57%);
+    right: -10px;
+    max-width: 127px;
+    min-height: 80px;
+
+    &:hover {
+      transform: translate(0%, -57%);
+    }
+  }
+
+  .action-game-landscape {
+    display: flex;
+    padding: 6px 4px 6px 4px;
+  }
+
+  .game-control {
+    position: relative;
+    border: 0;
+  }
+}
+
+
+/*
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 1024px) and (orientation: landscape) {
+  .action-game-control {
+    flex-direction: column;
+    background: linear-gradient(180deg, #5E2F74 0%, #442C5B 100%);
+    border: 1px solid #965ECB;
+    box-shadow: 1px 11px 20px rgba(0, 0, 0, 0.43);
+    border-radius: 8px;
+    margin: 4px;
+  }
+
+  .game-control__play-bet {
+    position: absolute;
+    top: 50%;
+    transform: translate(0%, -57%);
+    right: -10px;
+    max-width: 127px;
+    min-height: 80px;
+
+    &:hover {
+      transform: translate(0%, -57%);
+    }
+  }
+
+  .content-action-element__left-control .game-control__play-bet {
+    left: -10px;
+  }
+
+
+  .action-game-landscape {
+    display: flex;
+    padding: 6px 4px 6px 4px;
+  }
+
+  .game-control {
+    position: relative;
+    border: 0;
+  }
+}

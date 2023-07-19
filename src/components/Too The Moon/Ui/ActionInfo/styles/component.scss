@@ -1,0 +1,114 @@
+.action-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__wallet {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7px;
+    border: 0px;
+    border-radius: 4px;
+    margin: 2px;
+    background: #293255;
+
+    $fz: 20;
+    font-family: $font-family-OpenSansCondensed;
+    font-style: normal;
+    font-weight: 700;
+    font-size: em($fz, $fz_base);
+    line-height: em(12, $fz);
+
+    color: #EF9E53;
+    cursor: pointer;
+
+    & img {
+      padding-right: 12px;
+      min-width: 20px;
+    }
+  }
+
+  &__how-to-play {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7px;
+    border: 0px;
+    border-radius: 4px;
+    margin: 2px;
+    background: #293255;
+    $fz: 20;
+    font-family: $font-family-OpenSansCondensed;
+    font-style: normal;
+    font-weight: 700;
+    font-size: em($fz, $fz_base);
+    line-height: em(12, $fz);
+    color: #97ACFF;
+    cursor: pointer;
+
+    & img {
+      padding-right: 12px;
+      min-width: 20px;
+    }
+  }
+}
+
+/*
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .action-info {
+    &__wallet {
+      $fz: 12.6;
+      font-size: em($fz, $fz_base);
+      line-height: em(17, $fz);
+    }
+
+    &__how-to-play {
+      $fz: 12.6;
+      font-size: em($fz, $fz_base);
+      line-height: em(17, $fz);
+
+      & img {
+        padding-right: 0px;
+      }
+
+      span {
+        display: none;
+      }
+    }
+  }
+}
+
+/*
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 1024px) and (orientation: landscape) {
+  .action-info {
+    &__wallet {
+      $fz: 12.6;
+      font-size: em($fz, $fz_base);
+      line-height: em(17, $fz);
+    }
+
+    &__how-to-play {
+      $fz: 12.6;
+      font-size: em($fz, $fz_base);
+      line-height: em(17, $fz);
+
+      & img {
+        padding-right: 0px;
+      }
+
+      span {
+        display: none;
+      }
+    }
+  }
+}
+

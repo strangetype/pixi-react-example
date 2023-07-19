@@ -1,0 +1,34 @@
+.dg.ac {
+  right: unset !important;
+}
+
+.c {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  width: 70%;
+}
+
+.configs {
+  display: flex;
+  flex-basis: content;
+}
+
+.configs input[type=text] {
+  width: 27px !important;
+}
+
+.configs .config-btn {
+  margin-top: 4px;
+  margin-left: 12px;
+  margin-right: 12px;
+  padding: 2px;
+  width: 22%;
+  float: right;
+  background: #1a1a1a;
+  border: none;
+  color: #2fa1d6;
+}
+.configs .config-btn :active {
+  background: #2fa1d6;
+}

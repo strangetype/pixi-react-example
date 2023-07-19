@@ -1,0 +1,69 @@
+.modal-exit-app {
+  max-width: 570px;
+  max-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #181B29;
+  border: 2px solid #D7484A;
+  border-radius: 14px;
+
+  &__title {
+    display: flex;
+    align-items: center;
+    $fz: 25;
+    font-family: $font-family-OpenSansCondensed;
+    font-style: normal;
+    font-weight: 700;
+    font-size: em($fz, $fz_base);
+    line-height: em(34, $fz);
+    color: #D7484A;
+
+    & img {
+      padding-right: 12px;
+    }
+  }
+
+  &__content {
+    padding-top: 32px;
+    padding-bottom: 42px;
+    display: flex;
+    align-items: center;
+    $fz: 23;
+    font-family: $font-family-OpenSansCondensed;
+    font-style: normal;
+    font-weight: 700;
+    font-size: em($fz, $fz_base);
+    line-height: em(34, $fz);
+    color: #97ACFF;;
+  }
+
+  &__actions {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 220px;
+    gap: 10px;
+  }
+}
+
+
+/*
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 1024px) and (orientation: landscape) {
+  .modal-exit-app {
+    &__actions {
+      flex-direction: row;
+      min-width: unset;
+
+      button {
+        min-width: 220px;
+      }
+    }
+  }
+}

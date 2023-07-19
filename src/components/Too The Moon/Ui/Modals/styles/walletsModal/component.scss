@@ -1,0 +1,111 @@
+.modal-wallet {
+  max-width: 570px;
+  max-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #181B29;
+  border: 2px solid #EF9E53;
+  border-radius: 14px;
+
+  &__title {
+    display: flex;
+    align-items: center;
+    $fz: 25;
+    font-family: $font-family-OpenSansCondensed;
+    font-style: normal;
+    font-weight: 700;
+    font-size: em($fz, $fz_base);
+    line-height: em(34, $fz);
+    color: #EF9E53;
+
+    & img {
+      padding-right: 12px;
+    }
+  }
+
+  &__content {
+    padding-top: 28px;
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    gap: 20px 20px;
+    overflow-y: scroll;
+  }
+
+  &__confirm {
+    padding: 41px 0px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 220px;
+  }
+}
+
+.wallet-item {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  border: 2px solid #EF9E53;
+  border-radius: 9px;
+  width: 220px;
+  cursor: pointer;
+  transition: 0.25s;
+
+  &__summa {
+    $fz: 25;
+    font-family: $font-family-OpenSansCondensed;
+    font-style: normal;
+    font-weight: 700;
+    font-size: em($fz, $fz_base);
+    line-height: em(35, $fz);
+    color: #EF9E53;
+    padding: 6px;
+    flex-grow: 4;
+    text-align: center;
+    transition: 0.25s;
+  }
+
+  &__currency {
+    border-left: 2px solid #EF9E53;
+    $fz: 25;
+    font-family: $font-family-OpenSansCondensed;
+    font-style: normal;
+    font-weight: 700;
+    font-size: em($fz, $fz_base);
+    line-height: em(35, $fz);
+    color: #EF9E53;
+    padding: 6px 8px 6px 8px;
+    transition: 0.25s;
+  }
+
+  &--active {
+    border: 2px solid #39C572;
+
+    .wallet-item__summa {
+      color: #39C572;
+    }
+
+    .wallet-item__currency {
+      border-left: 2px solid #39C572;
+      color: #39C572;
+    }
+  }
+
+  &:hover {
+    border: 2px solid #39C572;
+
+    .wallet-item__summa {
+      color: #39C572;
+    }
+
+    .wallet-item__currency {
+      border-left: 2px solid #39C572;
+      color: #39C572;
+    }
+  }
+}

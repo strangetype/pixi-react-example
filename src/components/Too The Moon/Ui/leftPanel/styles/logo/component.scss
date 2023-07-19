@@ -1,0 +1,67 @@
+.logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+
+  &__image {
+    width: 52px;
+    height: 52px;
+    background: url('../../../../../../../public/assets/Too The Moon/image/logo-min.svg');
+    background-size: 52px 52px;
+  }
+
+  &__title {
+    $fz: 27;
+    font-family: $font-family-Poppins;
+    font-style: normal;
+    font-weight: 700;
+    font-size: em($fz, $fz_base);
+    line-height: 40px;
+    color: #EF9E53;
+    padding: 0 12px 0 12px;
+  }
+}
+
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .logo {
+    margin-bottom: 8px;
+
+    &__title {
+      $fz: 13;
+      font-size: em($fz, $fz_base);
+      line-height: 18px;
+    }
+
+    &__image {
+      width: 32px;
+      height: 32px;
+      background-size: 32px 32px;
+    }
+  }
+}
+
+
+/*
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 1024px) and (orientation: landscape) {
+  .logo {
+    margin-bottom: 8px;
+
+    &__title {
+      $fz: 17;
+      font-size: em($fz, $fz_base);
+      line-height: 26px;
+    }
+
+    &__image {
+      width: 32px;
+      height: 32px;
+      background-size: 32px 32px;
+    }
+  }
+}
+

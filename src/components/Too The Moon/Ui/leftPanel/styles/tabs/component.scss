@@ -1,0 +1,78 @@
+.tabs {
+  display: flex;
+  background: #161926;
+  padding: 2px;
+  align-items: center;
+  margin-bottom: 24px;
+  width: 351px;
+  &__item {
+    $fz: 18;
+    border: none;
+    font-family: $font-family-OpenSansCondensed;
+    font-style: normal;
+    font-weight: 700;
+    font-size: em($fz, $fz_base);
+    line-height: em(25, $fz);
+    color: #97ACFF;
+    background: #11141F;
+    padding: 6px 40px 6px 40px;
+    margin: 2px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    &:hover {
+      background: #293255;
+    }
+  }
+  &__item--active {
+    color: #323E6C;
+    background: #293255;
+  }
+}
+
+/*
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .tabs {
+    position: sticky;
+    top: calc(48px + max(0px, env(safe-area-inset-top)));
+    width: auto;
+    padding: 6px;
+    margin-bottom: 0;
+    &__item {
+      $fz: 14;
+      font-size: em($fz, $fz_base);
+      line-height: em(17, $fz);
+    }
+  }
+  .tabs.is-pinned {
+    background-color: rgb(14%, 16%, 25%, 0.8);
+    backdrop-filter: blur(30px);
+  }
+}
+
+/*
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 1024px) and (orientation: landscape) {
+  .tabs {
+    position: sticky;
+    top: 48px;
+    width: auto;
+    padding: 6px;
+    margin-bottom: 0;
+    &__item {
+      $fz: 14;
+      font-size: em($fz, $fz_base);
+      line-height: em(17, $fz);
+    }
+  }
+  .tabs.is-pinned {
+    background-color: #242941;
+  }
+}

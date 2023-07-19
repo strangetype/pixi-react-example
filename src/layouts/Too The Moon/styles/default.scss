@@ -1,0 +1,456 @@
+#root {
+  background: #181B29;
+}
+
+.content {
+  position: relative;
+}
+
+.content-game {
+  width: calc(100% - 499px);
+  height: calc(100% - 224px);
+  position: fixed;
+  right: 55px;
+}
+
+.content-warning {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(24, 27, 41, 0.82);
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.content-left-panel {
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 26px;
+  max-height: 100vh;
+  z-index: $z-index-elements;
+}
+
+
+.content-action {
+  position: fixed;
+  width: calc(100% - 499px);
+  bottom: 41px;
+  left: 444px;
+  z-index: 4;
+}
+
+.content-action-info {
+  position: fixed;
+  right: 31px;
+  top: 0;
+  padding: 26px;
+  z-index: $z-index-elements;
+
+  &::before {
+    position: absolute;
+    top: -10px;
+    right: 31px;
+    width: 100px;
+    height: 70px;
+    background: rgba(24, 27, 41, 0.82);
+    content: "";
+    filter: blur(8px);
+    z-index: -1;
+  }
+}
+
+.content-gradient {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 224px;
+  z-index: $z-index-gradient;
+  min-width: 100%;
+  background: linear-gradient(0deg, rgba(0, 41, 255, 0.27) -99.42%, rgba(55, 24, 248, 0) 93.8%);
+}
+
+.content-substrate {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 224px;
+  z-index: $z-index-substrate;
+  min-width: 100%;
+  background: #181B29;
+}
+
+.content-left-panel-substrate {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-height: 100%;
+  max-width: 444px;
+  min-width: 444px;
+  z-index: $z-index-substrate;
+  background: #181B29;
+  opacity: 0.6;
+  filter: blur(0.5rem);
+}
+
+.content-action-element {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+
+  &__right-control {
+    //  transform: scale(0.86);
+  }
+
+  &__left-control {
+    padding: 26px 0 38px 0;
+    // transform: scale(0.86);
+  }
+
+  &__card {
+    margin-top: 124px;
+    // transform: scale(0.86);
+  }
+}
+
+.content-action-history-line {
+  margin-left: 26px;
+  width: calc(100% - 26px);
+}
+
+.ReactModal__Overlay {
+  z-index: 998;
+  background-color: rgba(24, 27, 41, 0.82) !important;
+}
+
+.content-action-history-line-iphoneSE {
+  display: none;
+}
+
+.content-panel-mobile {
+  display: none;
+}
+
+
+.button-confirm {
+  text-align: center;
+  width: auto;
+  background: #39C572;
+  border-radius: 14px;
+  padding: 8px;
+  color: #1A4A1F;
+  $fz: 23;
+  font-family: $font-family-Oxanium;
+  font-style: normal;
+  font-weight: 700;
+  font-size: em($fz, $fz_base);
+  line-height: em(29, $fz);
+  cursor: pointer;
+  border: none;
+  border-bottom: 5px solid #1F8B4B;
+  box-shadow: 0 10px 20px rgb(0 0 0 / 19%), 0 6px 6px rgb(0 0 0 / 23%);
+  transition: 0.25s;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+}
+
+.button-cancel {
+  text-align: center;
+  width: auto;
+  background: #D7484A;
+  border-radius: 14px;
+  padding: 8px;
+  color: #FFC7C7;
+  $fz: 23;
+  font-family: $font-family-Oxanium;
+  font-style: normal;
+  font-weight: 700;
+  font-size: em($fz, $fz_base);
+  line-height: em(29, $fz);
+  cursor: pointer;
+  border: none;
+  border-bottom: 5px solid #A82424;
+  box-shadow: 0 10px 20px rgb(0 0 0 / 19%), 0 6px 6px rgb(0 0 0 / 23%);
+  transition: 0.25s;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+}
+
+
+/*
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .content {
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    height: 100%;
+    min-height: 100%;
+  }
+
+  .content-panel-mobile {
+    display: unset;
+  }
+
+  .content-game {
+    position: relative;
+    width: auto;
+    height: auto;
+    right: 0;
+    top: max(0px, env(safe-area-inset-top));
+  }
+
+  .content-action {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  .content-action-element {
+    position: relative;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+
+    &__left-control {
+      padding: 0;
+      width: 100%;
+    }
+
+    &__right-control {
+      padding: 0;
+      width: 100%;
+    }
+
+    &__card {
+      order: -1;
+      margin: 0;
+      transform: scale(0.66);
+    }
+  }
+
+  .content-panel-mobile {
+    position: unset;
+    bottom: 0;
+  }
+
+  .content-action-history-line {
+    margin: 0;
+    width: 100%;
+  }
+
+  .content-left-panel-substrate {
+    height: calc(50px + max(0px, env(safe-area-inset-top)));
+    width: 100%;
+    min-height: unset;
+    max-width: unset;
+    min-width: unset;
+    background-color: rgb(14%, 16%, 25%, 0.8);
+    filter: unset;
+    backdrop-filter: blur(30px);
+    opacity: unset;
+    box-shadow: 0 2px 2px -2px rgba(0, 0, 0, .2);
+    z-index: 10;
+  }
+
+
+  .content-left-panel {
+    top: max(0px, env(safe-area-inset-top));
+    padding: 8px 5px 0px 5px;
+    z-index: 11;
+
+    &__desktop {
+      display: none;
+    }
+  }
+
+  .content-action-info {
+    top: max(0px, env(safe-area-inset-top));
+    z-index: 11;
+    right: 0;
+    padding: 6px 2px 0px 5px;
+
+    &::before {
+      opacity: 0;
+    }
+  }
+
+  .ReactModal__Content {
+    margin-top: max(0px, env(safe-area-inset-top));
+    padding: 0 32px 0 32px;
+  }
+
+  .content-gradient {
+    display: none;
+  }
+
+  .content-substrate {
+    display: none;
+  }
+
+  /* iPhone SE Retina regardless of IOS version */
+  @media only screen and (width: 375px) and (height: 667px) and (orientation: portrait) {
+    .content-action-element {
+      top: -2px;
+    }
+    .content-action-history-line {
+      display: none;
+    }
+    .content-gradient {
+      display: none;
+    }
+    .content-action-history-line-iphoneSE {
+      display: unset;
+    }
+  }
+}
+
+
+/*
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 1024px) and (orientation: landscape) {
+  .content {
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    height: 100%;
+    min-height: 100%;
+  }
+
+  .content-panel-mobile {
+    display: unset;
+  }
+
+  .content-game {
+    position: unset;
+    width: 100%;
+    height: 100%;
+    right: 0;
+  }
+
+  .content-action {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  .content-action-element {
+    position: relative;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    gap: 60px;
+
+    &__left-control {
+      padding: 0;
+      width: 100%;
+    }
+
+    &__right-control {
+      padding: 0;
+      width: 100%;
+    }
+
+    &__card {
+      z-index: -1;
+      position: absolute;
+      top: -120%;
+      left: 50%;
+      transform: scale(0.68) translate(-72%, -150%);
+    }
+  }
+
+  .content-panel-mobile {
+    position: unset;
+    bottom: 0;
+  }
+
+  .content-action-history-line {
+    margin: 0;
+    width: 100%;
+  }
+
+  .content-left-panel-substrate {
+    // display: none;
+    height: 50px;
+    width: 100%;
+    min-height: unset;
+    max-width: unset;
+    min-width: unset;
+    background-color: #242941;
+    filter: unset;
+    backdrop-filter: unset;
+    opacity: unset;
+    box-shadow: 0 2px 2px -2px rgba(0, 0, 0, .2);
+    z-index: 10;
+  }
+
+
+  .content-left-panel {
+    padding: 8px 5px 0px 5px;
+    z-index: 11;
+
+    &__desktop {
+      display: none;
+    }
+  }
+
+  .content-action-info {
+    z-index: 11;
+    right: 0;
+    padding: 6px 2px 0px 5px;
+
+    &::before {
+      opacity: 0;
+    }
+  }
+
+  .ReactModal__Content {
+    padding: 0 32px 0 32px;
+  }
+
+  .content-gradient {
+    display: none;
+  }
+
+  .content-substrate {
+    display: none;
+  }
+
+  /* iPhone SE Retina regardless of IOS version */
+  @media only screen and (width: 375px) and (height: 667px) and (orientation: portrait) {
+    .content-action-element {
+      top: -2px;
+    }
+    .content-action-history-line {
+      display: none;
+    }
+    .content-gradient {
+      display: none;
+    }
+    .content-action-history-line-iphoneSE {
+      display: unset;
+    }
+  }
+}

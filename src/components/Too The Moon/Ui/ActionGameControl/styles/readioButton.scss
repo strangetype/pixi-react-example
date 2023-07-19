@@ -1,0 +1,98 @@
+.game-control-selected {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #1B1223;
+  border-radius: 14px;
+  padding: 4px 8px 4px 8px;
+  position: relative;
+  max-height: 39px;
+  min-height: 39px;
+  margin: 8px 14px 8px 14px;
+
+  &__item {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    width: 100%;
+    $fz: 22;
+    font-family: $font-family-Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: em($fz, $fz_base);
+    line-height: em(33, $fz);
+    color: #644483;
+    cursor: pointer;
+    text-transform: uppercase;
+    &--active {
+      color: #BC5ECB;
+    }
+  }
+
+  &__backlight {
+    position: absolute;
+    background: #522966;
+    border-radius: 11px;
+    max-height: 39px;
+    min-height: 39px;
+    width: 45%;
+    transition: left 0.32s ease 0s;
+    left: 0%;
+    margin-left: 6px;
+    pointer-events: none;
+  }
+}
+
+/*
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .game-control-selected {
+    margin: 0;
+    min-width: 140px;
+    max-height: 24px;
+    min-height: 24px;
+    border-radius: 8px;
+    &__item {
+      $fz: 10.5;
+      font-size: em($fz, $fz_base);
+      line-height: em(15, $fz);
+      white-space: nowrap;
+    }
+    &__backlight {
+      max-height: 24px;
+      min-height: 24px;
+      border-radius: 8px;
+      margin-left: 0px;
+    }
+  }
+}
+
+/*
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 1024px) and (orientation: landscape) {
+  .game-control-selected {
+    margin: 0;
+    min-width: 140px;
+    max-height: 24px;
+    min-height: 24px;
+    border-radius: 8px;
+    &__item {
+      $fz: 10.5;
+      font-size: em($fz, $fz_base);
+      line-height: em(15, $fz);
+      white-space: nowrap;
+    }
+    &__backlight {
+      max-height: 24px;
+      min-height: 24px;
+      border-radius: 8px;
+      margin-left: 0px;
+    }
+  }
+}

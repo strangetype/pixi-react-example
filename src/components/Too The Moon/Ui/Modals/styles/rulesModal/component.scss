@@ -1,0 +1,84 @@
+.modal-rules {
+  max-width: 570px;
+  max-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #181B29;
+  border: 2px solid #333D65;
+  border-radius: 14px;
+
+  &__title {
+    display: flex;
+    align-items: center;
+    $fz: 25;
+    font-family: $font-family-OpenSansCondensed;
+    font-style: normal;
+    font-weight: 700;
+    font-size: em($fz, $fz_base);
+    line-height: em(34, $fz);
+    color: #EF9E53;
+    & img {
+      padding-right: 12px;
+    }
+  }
+  &__content {
+    padding-top: 28px;
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    gap: 20px 20px;
+    overflow-y: scroll;
+  }
+  &__content-info {
+    $fz: 15;
+    font-family: $font-family-OpenSansCondensed;
+    font-style: normal;
+    font-weight: 700;
+    font-size: em($fz, $fz_base);
+    line-height: em(20, $fz);
+    color: #97ACFF;
+    padding: 20px 20px 0px 20px;
+  }
+}
+
+.rules-card {
+  width: 231.56px;
+  &__box {
+    background: #252A43;
+    border-radius: 5.6875px;
+    width: 231.56px;
+    height: 207.19px;
+    &__check {
+      position: relative;
+      top: 4px;
+      margin: 4px;
+      text-align: center;
+      width: 24px;
+      height: 24px;
+      background: #181B29;
+      border-radius: 5.6875px;
+      color: #97ACFF;
+      $fz: 18;
+      font-family: $font-family-OpenSansCondensed;
+      font-style: normal;
+      font-weight: 700;
+      font-size: em($fz, $fz_base);
+      line-height: em(24, $fz);
+    }
+  }
+  &__subtitle {
+    padding-top: 14px;
+    $fz: 17;
+    font-family: $font-family-OpenSansCondensed;
+    font-style: normal;
+    font-weight: 700;
+    font-size: em($fz, $fz_base);
+    line-height: em(22, $fz);
+    color: #97ACFF;
+  }
+}

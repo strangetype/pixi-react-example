@@ -1,0 +1,61 @@
+.scroll-section {
+  position: fixed;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: calc(100% - 345px);
+  min-height: calc(100% - 345px);
+  &::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 100px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .scroll-section {
+    position: unset;
+    overflow: unset;
+    overflow-x: unset;
+    max-width: 100%;
+    min-height: unset;
+    height: unset;
+    padding: 2px;
+    &::-webkit-scrollbar {
+      width: unset;
+      height: unset;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: unset;
+    }
+  }
+}
+
+
+/*
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 1024px) and (orientation: landscape) {
+  .scroll-section {
+    position: unset;
+    overflow: unset;
+    overflow-x: unset;
+    max-width: 100%;
+    min-height: unset;
+    height: unset;
+    padding: 2px;
+    &::-webkit-scrollbar {
+      width: unset;
+      height: unset;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: unset;
+    }
+  }
+}

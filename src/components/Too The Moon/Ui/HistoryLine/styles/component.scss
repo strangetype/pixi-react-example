@@ -1,0 +1,78 @@
+.history-line {
+  position: relative;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  background: #11141F;
+  border-radius: 5px;
+  padding: 8px 88px 8px 4px;
+  overflow: hidden;
+  &__shadow {
+    position: absolute;
+    left: 4px;
+    margin: auto;
+    min-width: 745px;
+    min-height: 35px;
+    background: linear-gradient(90deg, #181B40 0%, rgba(23, 26, 53, 0) 97.06%);
+    border-radius: 4px 0px 0px 5px;
+    z-index: 1;
+  }
+}
+
+.history-button {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 4px;
+  background: #293255;
+  border-radius: 2px;
+  border: none;
+  min-height: 35px;
+  min-width: 35px;
+  cursor: pointer;
+  transition: 0.25s;
+  &:hover {
+    border: 1px solid #5187C6;
+  }
+}
+
+/*
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .history-line {
+    padding: 8px 0px 8px 0px;
+    overflow-x: scroll;
+    width: 100%;
+  }
+
+  .history-button {
+    display: none;
+  }
+  .history-line__shadow {
+    display: none;
+  }
+}
+
+/*
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 1024px) and (orientation: landscape) {
+  .history-line {
+    padding: 8px 0px 8px 0px;
+    overflow-x: scroll;
+    width: 100%;
+  }
+
+  .history-button {
+    display: none;
+  }
+  .history-line__shadow {
+    display: none;
+  }
+}

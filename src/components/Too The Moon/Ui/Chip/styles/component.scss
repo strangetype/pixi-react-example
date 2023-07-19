@@ -1,0 +1,20 @@
+.chip {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #1C2030;
+  border: 1px solid #399977;
+  border-radius: 2.5px;
+  $fz: 17;
+  font-family: $font-family-Oxanium;
+  font-style: normal;
+  font-weight: 600;
+  font-size: em($fz, $fz_base);
+  line-height: em(21, $fz);
+  color: #399977;
+  min-width: 63px;
+  min-height: 24px;
+  max-height: 24px;
+  padding-top: 1px;
+  margin: 0px 4px 0px 4px;
+}

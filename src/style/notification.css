@@ -1,0 +1,113 @@
+.van-overflow-hidden {
+    overflow: hidden !important;
+}
+
+.van-popup {
+    position: fixed;
+    max-height: 100%;
+    transition: transform 0.3s;
+    -webkit-overflow-scrolling: touch;
+    z-index: 2222;
+    font-family: 'Montserrat400';
+}
+
+.van-popup--center {
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+}
+
+.van-popup--center.van-popup--round {
+    border-radius: 16px;
+}
+
+.van-popup--top {
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.van-popup--top.van-popup--round {
+    border-radius: 0 0 16px 16px;
+}
+
+.van-popup--right {
+    top: 50%;
+    right: 0;
+    transform: translate3d(0, -50%, 0);
+}
+
+.van-popup--right.van-popup--round {
+    border-radius: 16px 0 0 16px;
+}
+
+.van-popup--bottom {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.van-popup--bottom.van-popup--round {
+    border-radius: 16px 16px 0 0;
+}
+
+.van-popup--left {
+    top: 50%;
+    left: 0;
+    transform: translate3d(0, -50%, 0);
+}
+
+.van-popup--left.van-popup--round {
+    border-radius: 0 16px 16px 0;
+}
+
+.van-popup-slide-top-enter-active, .van-popup-slide-left-enter-active, .van-popup-slide-right-enter-active, .van-popup-slide-bottom-enter-active {
+    transition-timing-function: ease-out;
+}
+
+.van-popup-slide-top-leave-active, .van-popup-slide-left-leave-active, .van-popup-slide-right-leave-active, .van-popup-slide-bottom-leave-active {
+    transition-timing-function: ease-in;
+}
+
+.van-popup-slide-top-enter, .van-popup-slide-top-leave-active {
+    transform: translate3d(0, -100%, 0);
+}
+
+.van-popup-slide-right-enter, .van-popup-slide-right-leave-active {
+    transform: translate3d(100%, -50%, 0);
+}
+
+.van-popup-slide-bottom-enter, .van-popup-slide-bottom-leave-active {
+    transform: translate3d(0, 100%, 0);
+}
+
+.van-popup-slide-left-enter, .van-popup-slide-left-leave-active {
+    transform: translate3d(-100%, -50%, 0);
+}
+
+.van-notify {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    color: #fff;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+}
+
+.van-notify--primary {
+    background-color: #1989fa;
+}
+
+.van-notify--success {
+    background-color: #07c160;
+}
+
+.van-notify--danger {
+    background-color: #ee0a24 !important;
+}
+
+.van-notify--warning {
+    background-color: #ff976a;
+}

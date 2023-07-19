@@ -1,0 +1,49 @@
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 132deg;
+  inherits: false;
+}
+
+.card {
+  $fz: 52;
+  font-family: $font-family-Oxanium;
+  font-style: normal;
+  font-weight: 600;
+  font-size: em($fz, $fz_base);
+  line-height: em(65, $fz);
+
+  background: #1C2030;
+  width: 250px;
+  height: 80px;
+  position: relative;
+  border-radius: 16px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  box-shadow: 0px 1.01261px 29.3658px -7.08829px #6DDE5D;
+  color: #4CF15D;
+}
+
+
+.card::after {
+  content: "";
+  width: 256px;
+  height: 86px;
+  border-radius: 16px;
+  background-image: linear-gradient(
+                  var(--rotate)
+          , #6DDE5D, #4CF15D 43%, #7EE8FA);
+  position: absolute;
+  z-index: -1;
+  animation: spincard 2.5s linear infinite;
+}
+
+@keyframes spincard {
+  0% {
+    --rotate: 0deg;
+  }
+  100% {
+    --rotate: 360deg;
+  }
+}
